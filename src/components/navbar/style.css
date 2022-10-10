@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap");
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    font-size: 0.925rem;
+}
+
+.container {
+    width: 1170px;
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.navbar,
+.navbar > .container {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar {
+    box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+    background-color: #fff;
+    padding: 1rem 1.15rem;
+    border-bottom: 1px solid #eceef3;
+}
+
+@media (min-width: 1200px) {
+    .navbar .container {
+        max-width: 1300px;
+    }
+}
+.navbar .navbar-header {
+    display: flex;
+    align-items: center;
+}
+
+.navbar .navbar-header .navbar-toggler {
+    cursor: pointer;
+    border: none;
+    display: none;
+    outline: none;
+}
+
+.navbar .navbar-header .navbar-toggler span {
+    height: 2px;
+    width: 22px;
+    background-color: #929aad;
+    display: block;
+}
+
+.navbar .navbar-menu .navbar-nav {
+    margin-left: auto;
+    flex-direction: row;
+    display: flex;
+    padding-left: 0;
+    margin-bottom: 0;
+    list-style: none;
+    cursor: pointer;
+}
+
+.navbar .navbar-menu .navbar-nav > a {
+    color: #3c4250;
+    text-decoration: none;
+    display: inline-block;
+    padding: 0.5rem 1rem;
+}
+
+.navbar .navbar-menu .navbar-nav a:hover {
+    color: #66f;
+}
+
+.navbar .navbar-menu > p {
+    color: #3c4250;
+    cursor: pointer;
+}
+
+.navbar .navbar-menu > p:hover {
+    color: #66f;
+}
+
+.navbar .navbar-header > a span {
+    color: #66f;
+}
+
+.navbar .navbar-header h4 {
+    font-weight: 500;
+    font-size: 1.25rem;
+}

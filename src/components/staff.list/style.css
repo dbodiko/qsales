@@ -1,0 +1,15 @@
+table {
+    max-width: 100%;
+    width: 40%;
+    border-collapse: collapse;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 20px
+}
+
+th {
+    height: 50px;
+    font-size: 14px;
+    background: #FAFAFA;
+    letter-spacing: 1px;
+}
