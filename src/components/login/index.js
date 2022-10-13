@@ -32,33 +32,35 @@ const Login = () => {
     }
 
     return (
-        <div>
-            <div className="background">
-
+        <section>
+            <div className="login-box">
+                <h2 className="colorboard">Login</h2>
+                <form onSubmit={handleLogin}>
+                    <div className="user-box">
+                        <input type="text"
+                               value={email}
+                               placeholder="Email or phone"
+                               id="username"
+                               onChange={onChangeEmail}/>
+                    </div>
+                    <div className="user-box">
+                        <input type="password"
+                               value={password}
+                               placeholder="Password"
+                               id="password"
+                               onChange={onChangePassword}/>
+                    </div>
+                    <button type="submit">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                        Submit
+                    </button>
+                </form>
             </div>
-            <form onSubmit={handleLogin}>
-                <h3>QSales</h3>
+        </section>
 
-                <label htmlFor="username">Username</label>
-                <input type="text"
-                       placeholder="Email or Phone"
-                       value={email}
-                       id="username"
-                       onChange={onChangeEmail}/>
-
-                <label htmlFor="password">Password</label>
-                <input type="password"
-                       value={password}
-                       placeholder="Password"
-                       id="password"
-                       onChange={onChangePassword}/>
-
-                <button type="submit"
-                        disabled={!email.length || !password.length}>
-                    Log In
-                </button>
-            </form>
-        </div>
     )
 }
 

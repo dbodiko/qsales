@@ -17,7 +17,7 @@ const StaffList = () => {
 
     useEffect(() => {
         getAllStaffs()
-    }, []);
+    }, );
 
     const getAllStaffs = async () => {
         const staff = await api.getAllStaffs()
