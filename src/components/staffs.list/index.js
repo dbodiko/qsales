@@ -1,10 +1,10 @@
-import {Table, Container} from "react-bootstrap";
+import {Container, Table} from "react-bootstrap";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {useEffect, useState} from "react";
 
 import Menu from "../navbar";
-import Staffs from "../staffs";
+import Staffs from "../staff";
 import useApi from "../../hooks/useApi";
 
 
@@ -17,7 +17,7 @@ const StaffList = () => {
 
     useEffect(() => {
         getAllStaffs()
-    }, );
+    }, []);
 
     const getAllStaffs = async () => {
         const staff = await api.getAllStaffs()

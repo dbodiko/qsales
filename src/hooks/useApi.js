@@ -2,7 +2,7 @@ import axios from "axios";
 import {useAuth} from "./useAuth";
 
 export default function useApi() {
-    const apiUrl = `https://rpi.qsales.co/api`
+    const apiUrl = `https://api.qsales.co`
     const auth = useAuth()
 
     const axiosRequest = async (method, uri, data, headers) => {
@@ -14,7 +14,7 @@ export default function useApi() {
                 method,
                 params,
                 data: body,
-                headers: {...headers, Authorization:`Bearer ${token}`}
+                headers: {...headers, Authorization: `Bearer ${token}`}
             })
         } catch (e) {
             if (e?.response?.status === 401 && token) {
@@ -26,10 +26,12 @@ export default function useApi() {
 
     return {
         login: (data) =>
-            axiosRequest("POST", "auth/login", data).then(({ data }) => data),
+            axiosRequest("POST", "auth/login", data).then(({data}) => data),
         getAllStaffs: (data) =>
-            axiosRequest("GET", "Staffs/GetAllStaffs", data).then(({ data }) => data),
+            axiosRequest("GET", "Staffs/GetAllStaffs", data).then(({data}) => data),
         getAllClients: (data) =>
-            axiosRequest("POST", "Customers/GetPage", data).then(({ data }) => data),
+            axiosRequest("POST", "Customers/GetPage", data).then(({data}) => data),
+        getAllDocuments: (data) =>
+            axiosRequest("POST", "Documents/GetDocumentsPage", data).then(({data}) => data),
     }
 }

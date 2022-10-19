@@ -2,7 +2,7 @@ import "./style.css"
 
 import {NavLink} from "react-router-dom"
 
-import React, {useState}   from "react";
+import React from "react";
 import {useAuth} from "../../hooks/useAuth";
 
 
@@ -10,7 +10,7 @@ const Menu = () => {
     const auth = useAuth()
 
     const handleLogout = () => {
-      auth.singOut()
+        auth.singOut()
     }
 
     const setActive = ({isActive}) => ({color: isActive ? '#66f' : ''})
@@ -27,7 +27,7 @@ const Menu = () => {
 
                 <div className="navbar-menu">
                     <ul className="navbar-nav">
-                        <NavLink>Документи</NavLink>
+                        <NavLink to="/documents" style={setActive}>Документи</NavLink>
                         <NavLink>Маршрути</NavLink>
                         <NavLink to="/staffs" style={setActive}>Працівники</NavLink>
                         <NavLink>Товари</NavLink>

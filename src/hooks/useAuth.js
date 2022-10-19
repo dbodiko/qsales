@@ -1,7 +1,7 @@
-import React, { useContext, createContext } from "react";
-import { useNavigate } from "react-router-dom";
+import React, {createContext, useContext} from "react";
+import {useNavigate} from "react-router-dom";
 
-import { setItem, removeItem, getItem } from "../utils/localStorage";
+import {getItem, removeItem, setItem} from "../utils/localStorage";
 
 const authContext = createContext({});
 
@@ -10,12 +10,12 @@ function useProvideAuth() {
 
     const signIn = (access_token) => {
         setItem("access_token", access_token.token);
-        navigate("/staffs", { replace: true });
+        navigate("/staff", {replace: true});
     };
 
     const singOut = () => {
         removeItem("access_token");
-        navigate("/login", { replace: true });
+        navigate("/login", {replace: true});
     };
 
     return {
@@ -25,7 +25,7 @@ function useProvideAuth() {
     };
 }
 
-export function ProvideAuth({ children }) {
+export function ProvideAuth({children}) {
     const auth = useProvideAuth();
     return <authContext.Provider value={auth}>{children}</authContext.Provider>;
 }
