@@ -1,12 +1,12 @@
 import './style.css'
 
 import React, {useEffect, useState} from 'react';
-import Menu from "../navbar";
+import NavbarMenu from "../navbar";
 import {Table} from "react-bootstrap";
 import useApi from "../../hooks/useApi";
 import Pages from "../pagination";
 
-import Document from "../document";
+import Document from "./document";
 
 let pageSize = 10
 let currentPage = 0
@@ -46,7 +46,7 @@ const DocumentList = () => {
 
     return (
         <section>
-            <Menu/>
+            <NavbarMenu/>
             <div className="m-4">
                 <Table striped bordered hover>
                     <thead>

@@ -6,7 +6,7 @@ import React from "react";
 import {useAuth} from "../../hooks/useAuth";
 
 
-const Menu = () => {
+const NavbarMenu = () => {
     const auth = useAuth()
 
     const handleLogout = () => {
@@ -28,7 +28,7 @@ const Menu = () => {
                 <div className="navbar-menu">
                     <ul className="navbar-nav">
                         <NavLink to="/documents" style={setActive}>Документи</NavLink>
-                        <NavLink>Маршрути</NavLink>
+                        <NavLink to="/routes" style={setActive}>Маршрути</NavLink>
                         <NavLink to="/staffs" style={setActive}>Працівники</NavLink>
                         <NavLink>Товари</NavLink>
                         <NavLink to="/clients" style={setActive}>Клієнти</NavLink>
@@ -43,4 +43,4 @@ const Menu = () => {
     )
 };
 
-export default Menu;
+export default NavbarMenu;

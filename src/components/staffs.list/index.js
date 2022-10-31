@@ -3,8 +3,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 
 import {useEffect, useState} from "react";
 
-import Menu from "../navbar";
-import Staffs from "../staff";
+import NavbarMenu from "../navbar";
+import Staffs from "./staff";
 import useApi from "../../hooks/useApi";
 
 
@@ -26,8 +26,8 @@ const StaffList = () => {
 
     return (
         <section>
-            <Menu/>
-            <Container>
+            <NavbarMenu/>
+            <Container className="mt-4">
 
                 <Table striped bordered hover>
                     <thead>

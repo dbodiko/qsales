@@ -8,10 +8,11 @@ import {faMagnifyingGlass} from "@fortawesome/free-solid-svg-icons";
 
 import {useEffect, useState} from "react";
 
-import Menu from "../navbar";
-import Clients from "../client";
+
+import Clients from "./client";
 import useApi from "../../hooks/useApi";
 import Pages from "../pagination";
+import NavbarMenu from "../navbar";
 
 const pageSize = 5
 let currentPage = 0
@@ -65,7 +66,7 @@ const ClientList = () => {
 
     return (
         <section>
-            <Menu/>
+            <NavbarMenu/>
 
             <div className="search__container">
                 <input className="search__input"

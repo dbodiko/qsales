@@ -33,5 +33,11 @@ export default function useApi() {
             axiosRequest("POST", "Customers/GetPage", data).then(({data}) => data),
         getAllDocuments: (data) =>
             axiosRequest("POST", "Documents/GetDocumentsPage", data).then(({data}) => data),
+        getRoutes: (data) =>
+            axiosRequest("POST", "Routes/GetPage", data).then(({data}) => data),
+        getRouteByCode: (data) =>
+            axiosRequest("POST", "Routes/GetRoutesByStaffCodes", data).then(({data}) => data),
+        addNewRoute: (data) =>
+            axiosRequest("POST", "Routes/RoutesBulkInsertOrUpdate", data).then(({data}) => data),
     }
 }

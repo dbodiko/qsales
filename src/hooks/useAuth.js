@@ -10,12 +10,12 @@ function useProvideAuth() {
 
     const signIn = (access_token) => {
         setItem("access_token", access_token.token);
-        navigate("/staff", {replace: true});
+        navigate("/staffs", {replace: true});
     };
 
     const singOut = () => {
         removeItem("access_token");
-        navigate("/login", {replace: true});
+        navigate("/", {replace: true});
     };
 
     return {
