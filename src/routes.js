@@ -4,6 +4,7 @@ import StaffList from "./components/staffs.list"
 import ClientList from "./components/clients.list";
 import DocumentList from "./components/documents.list";
 import RoutesList from "./components/routes.list";
+import EditRoute from "./components/routes.list/edit.route";
 
 
 const Index = () => {
@@ -14,6 +15,7 @@ const Index = () => {
             <Route path="/clients" element={<ClientList/>}/>
             <Route path="/documents" element={<DocumentList/>}/>
             <Route path="/routes" element={<RoutesList/>}/>
+            <Route path="/routeedit/:code/:name" element={<EditRoute/>}/>
         </Routes>
     )
 }

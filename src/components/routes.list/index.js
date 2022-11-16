@@ -80,14 +80,11 @@ const RoutesList = () => {
     }
 
     const handleSave = async (name, code) => {
-        console.log('NAME', name)
-        console.log('CODE', code)
         try {
             await api.addNewRoute([{name: name, code: code}])
             getRoutes()
         } catch (error) {
             console.error(error)
-            console.log('ERROR ERROR ERROR ERROR')
         }
     }
 

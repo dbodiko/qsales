@@ -10,7 +10,8 @@ const Route = ({code, name}) => {
     return (
         <tr>
             <td>{code}</td>
-            <td>{name}<NavLink to="/clients"><FontAwesomeIcon className="px-3" icon={faPenToSquare}/></NavLink></td>
+            <td>{name}<NavLink to={`/routeedit/${code}/${name}`}><FontAwesomeIcon className="px-3"
+                                                                                  icon={faPenToSquare}/></NavLink></td>
         </tr>
     )
 }
