@@ -5,6 +5,7 @@ import ClientList from "./components/clients.list";
 import DocumentList from "./components/documents.list";
 import RoutesList from "./components/routes.list";
 import EditRoute from "./components/routes.list/edit.route";
+import DocumentInfo from "./components/documents.list/document.info";
 
 
 const Index = () => {
@@ -16,6 +17,7 @@ const Index = () => {
             <Route path="/documents" element={<DocumentList/>}/>
             <Route path="/routes" element={<RoutesList/>}/>
             <Route path="/routeedit/:code/:name" element={<EditRoute/>}/>
+            <Route path="/document/info/:id" element={<DocumentInfo/>}/>
         </Routes>
     )
 }

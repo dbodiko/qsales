@@ -63,12 +63,10 @@ const DocumentList = () => {
                     </tr>
                     </thead>
                     <tbody>
-
                     {documents.items.map((doc) => (
-                        <Document key={doc.id}
-                                  {...doc}/>
+                            <Document key={doc.id}
+                                      {...doc}/>
                     ))}
-
                     </tbody>
                 </Table>
                 <Pages onChange={onChangePage}
